@@ -2,6 +2,8 @@
 // var = global
 // const = constante
 
+const jsConfetti = new JSConfetti();
+
 const elementoPontosX = document.getElementById("pontosX").querySelector("h3");
 
 const elementoEmpates = document.getElementById("empates").querySelector("h3");
@@ -177,6 +179,13 @@ function atualizarPlacar(resultado) {
         elementoPontosX.style.animation = "";
       }, 300);
 
+
+      jsConfetti.addConfetti({
+        confettiColors: ["#00c2c0"],
+        confettiRadius: 4,
+        confettiNumber: 200,
+      });
+
       break;
 
     case "o":
@@ -189,6 +198,14 @@ function atualizarPlacar(resultado) {
         elementoPontosO.style.animation = "";
       }, 300);
 
+
+      jsConfetti.addConfetti({
+        confettiColors: ["#f4b348"],
+        confettiRadius: 4,
+        confettiNumber: 200,
+      });
+
+
       break;
 
     case "empate":
@@ -200,6 +217,13 @@ function atualizarPlacar(resultado) {
       setTimeout(() => {
         elementoEmpates.style.animation = "";
       }, 300);
+
+
+      jsConfetti.addConfetti({
+        confettiColors: ["#a7bec8"],
+        confettiRadius: 4,
+        confettiNumber: 200,
+      });
 
       break;
 
